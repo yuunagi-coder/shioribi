@@ -10,5 +10,20 @@
   },
   "browserslist": [
     "defaults"
-  ]
+  ],
+  "dependencies": {
+    "@hotwired/stimulus": "^3.2.1",
+    "@hotwired/turbo-rails": "^7.3.0",
+    "bootstrap": "^5.2.3",
+    "@popperjs/core": "^2.11.6",
+    "bootstrap-icons": "^1.10.3"
+  },
+  "devDependencies": {
+    "esbuild": "^0.28.0",
+    "sass": "^1.56.1",
+    "postcss": "^8.4.20",
+    "postcss-cli": "^10.1.0",
+    "autoprefixer": "^10.4.13",
+    "nodemon": "^2.0.20"
+  }
 }
