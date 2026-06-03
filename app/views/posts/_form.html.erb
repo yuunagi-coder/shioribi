@@ -1,0 +1,28 @@
+<%= form_with(model:post) do |form| %>
+    <% if post.errors.any? %>
+    <div>
+        <h2><%=pluralize(post.errors.count,"error")%>prohibited this post from being saved;</h2>
+
+        <ul>
+        <% post.errors.each do |error| %>
+            <li><%= error.full_message %></li>
+        <% end %>
+        </ul>
+    </div>
+    <% end %>
+    <div>
+        <%= form.label :content, '一文',style: "display:block" %>
+        <%= form.text_area :content %>
+    </div>
+    <div>
+        <%= form.label :memo, 'メモ',style: "display:block" %>
+        <%= form.text_area :memo %>
+    </div>
+    <div>
+        <%= form.label :source, '出典',style: "display:block" %>
+        <%= form.text_area :source %>
+    </div>
+    <div>
+        <%= form.submit '記録する' %>
+    </div>
+<% end %>

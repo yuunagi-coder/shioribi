@@ -25,10 +25,11 @@
 
   <body>
     <% if current_user.present? %>
-      <span><%= current_user.name %></span>
-      <%= link_to 'ログアウト',logout_path %>
-    <% else %>
-      <%= link_to 'ログイン',new_login_path %>
+      <header>
+        <%= link_to '栞灯 SHIORIBI', posts_path %>
+        <p><%= current_user.name %></p>
+        <%= link_to 'ログアウト',logout_path %>
+      </header>
     <% end %>
     <%= yield %>
   </body>
