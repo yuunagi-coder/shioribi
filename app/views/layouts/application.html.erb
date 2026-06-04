@@ -23,14 +23,16 @@
     <%= javascript_include_tag "application", "data-turbo-track": "reload", type: "module" %>
   </head>
 
-  <body>
+  <body class="bg-danger-subtle vh-100 container d-flex align-items-center justify-content-center">
     <% if current_user.present? %>
-      <header>
+      <header class="h-15">
         <%= link_to '栞灯 SHIORIBI', posts_path %>
         <p><%= current_user.name %></p>
         <%= link_to 'ログアウト',logout_path %>
       </header>
     <% end %>
-    <%= yield %>
+      <main class="mw-100">
+       <%= yield %>
+      </main>
   </body>
 </html>
