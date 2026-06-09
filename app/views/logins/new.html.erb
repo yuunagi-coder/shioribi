@@ -1,20 +1,23 @@
-<h1>ログイン</h1>
+<div class="d-flex flex-column justify-content-center align-items-center">
+    <h1>ログイン</h1>
+</div>
 
-<div class="input-group gap-3 mt-5">
+<div class="input-group gap-3 mt-5 d-flex flex-column justify-content-center align-items-center">
 <%= form_with(url: login_path) do |form| %>
-<div>
-    <%= form.label :name,'ユーザー名',style: "display: block" %>
-    <%= form.text_field :name,value: params[:name],class: 'form-control' %>
-</div>
-<div class="mt-2">
-    <%= form.label :password,'パスワード',style: "display:block" %>
-    <%= form.password_field :password,class: 'form-control' %>
-</div>
+    <div>
+        <%= form.label :name,'ユーザー名',style: "display: block" %>
+        <%= form.text_field :name,value: params[:name],class: 'form-control' %>
+    </div>
+    <div class="mt-2">
+        <%= form.label :password,'パスワード',style: "display:block" %>
+        <%= form.password_field :password,class: 'form-control' %>
+    </div>
 
-<div class="my-3">
-    <%= form.submit 'ログイン' ,class: "btn btn-danger w-75" %>
-</div>
+    <div class="my-3">
+        <%= form.submit 'ログイン' ,class: "btn btn-danger w-50" %>
+    </div>
 <% end %>
+    <div class="d-flex flex-column justify-content-center align-items-center">
+        <%= link_to '会員登録はこちら' ,new_user_path, class: "btn btn-light w-100 mt-5" %>
+    </div>
 </div>
-
-<%= link_to '会員登録はこちら' ,new_user_path, class: "btn btn-light w-75 mt-5" %>

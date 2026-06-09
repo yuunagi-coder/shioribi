@@ -3,9 +3,8 @@
 
 <%= render @post %>
 
-<div>
-    <%= link_to "編集", edit_post_path(@post) %>
-    <%= link_to "一覧", posts_path %>
-
-    <%= button_to "削除", @post, method: :delete %>
+<div class="d-flex flex column">
+    <%= link_to "編集", edit_post_path(@post),class: "btn btn-danger m-2" %>
+    <%= button_to "削除", @post, method: :delete ,class: "btn btn-danger m-2"%>
+    <%= link_to "一覧", posts_path,class: "btn btn-light m-2" %>
 </div>

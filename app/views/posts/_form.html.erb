@@ -1,6 +1,6 @@
 <%= form_with(model:post) do |form| %>
     <% if post.errors.any? %>
-    <div>
+    <div class="m-2">
         <h2><%=pluralize(post.errors.count,"error")%>prohibited this post from being saved;</h2>
 
         <ul>
@@ -10,19 +10,19 @@
         </ul>
     </div>
     <% end %>
-    <div>
+    <div class="m-2">
         <%= form.label :content, '一文',style: "display:block" %>
-        <%= form.text_area :content %>
+        <%= form.text_area :content, placeholder: "心に残った一文を入力してください",class: 'form-control' %>
     </div>
-    <div>
-        <%= form.label :memo, 'メモ',style: "display:block" %>
-        <%= form.text_area :memo %>
-    </div>
-    <div>
+    <div class="m-2">
         <%= form.label :source, '出典',style: "display:block" %>
-        <%= form.text_area :source %>
+        <%= form.text_area :source, placeholder: "作品名、人名等",class: 'form-control' %>
+    </div>
+    <div class="m-2">
+        <%= form.label :memo, 'メモ（任意）',style: "display:block" %>
+        <%= form.text_area :memo, placeholder: "出会った時の思いを自由に書いてみましょう",class: 'form-control' %>
     </div>
     <div>
-        <%= form.submit '記録する' %>
+        <%= form.submit '記録する', class: "btn btn-danger m-2" %>
     </div>
 <% end %>
