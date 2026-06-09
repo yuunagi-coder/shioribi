@@ -1,7 +1,11 @@
 class PostsController < ApplicationController
     before_action :set_post, only: [:show, :edit, :update, :destroy]
     def index
-        @posts = Post.all
+        @posts = Post.all.order(created_at: :desc)
+    end
+
+    def my_posts
+        @posts = current_user.posts.order(created_at: :desc)
     end
 
     def show
@@ -12,11 +16,11 @@ class PostsController < ApplicationController
     end
 
     def create
-        @post = Post.new(post_params)
+        @post = current_user.posts.new(post_params)
         if @post.save
             redirect_to @post, notice: '栞を挟みました'        
         else
-            render.new
+            render :new
         end            
     end
     

@@ -23,16 +23,31 @@
     <%= javascript_include_tag "application", "data-turbo-track": "reload", type: "module" %>
   </head>
 
-  <body class="bg-danger-subtle vh-100 container d-flex align-items-center justify-content-center">
+  <body class="bg-danger-subtle vh-100 container d-flex flex-column">
     <% if current_user.present? %>
-      <header class="h-15">
-        <%= link_to '栞灯 SHIORIBI', posts_path %>
-        <p><%= current_user.name %></p>
-        <%= link_to 'ログアウト',logout_path %>
-      </header>
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <%= link_to '栞灯 SHIORIBI', root_path, class: 'navbar-brand fs-2' %>
+
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <span class="nav-link"><%= current_user.name %></span>
+            </li>
+            <li class="nav-item">
+              <%= link_to 'ログアウト', logout_path, class: 'nav-link' %>
+            </li>
+          </ul>
+        </div>
+
+      </nav>
+      <main class="mw-100 flex-grow-1 d-flex flex-column
+      </main>
     <% end %>
-      <main class="mw-100">
-       <%= yield %>
+      <main class="mw-100 flex-grow-1 d-flex flex-column justify-content-center text-align-center">
+         <%= yield %>
       </main>
   </body>
 </html>

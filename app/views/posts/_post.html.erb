@@ -1,13 +1,14 @@
-<div id="<%= dom_id post %>">
-    <p>
+<div id="<%= dom_id post %>" class="bg-light d-flex flex-column m-3">
+<% if local_assigns[:show_user_name] %>
+    <p class="m-2">
+        <%= post.user.name %>
+    </p>
+<% end %>
+    <p class="m-2">
         <strong>一文:</strong>
         <%= post.content %>
     </p>
-    <p>
-        <strong>メモ:</strong>
-        <%= post.memo %>
-    </p>
-    <p>
+    <p class="m-2">
         <strong>出典:</strong>
         <%= post.source %>
     </p>

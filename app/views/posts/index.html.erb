@@ -1,12 +1,12 @@
 <p><%= notice %></p>
-<h1>投稿一覧</h1>
+<h2>遠くの灯火</h2>
 <div id="posts">
+<% if @posts.any? %>
     <% @posts.each do |post| %>
-        <%= render post %>
-    <p>
-        <%= link_to "詳細", post %>
-    </p>
+        <%= render partial: 'post', locals: { post: post, show_user_name: true } %>
     <% end %>
+<% else %>
+    <p>投稿がありません</p>
+<% end %>
 </div>
 
-<%= link_to "新規作成", new_post_path %>
