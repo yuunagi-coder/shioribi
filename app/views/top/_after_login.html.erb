@@ -13,20 +13,20 @@
 
 <div class="d-flex justify-content-between">
     <div>
-        <h2>遠くの灯火</h2>
+        <h2><%= t('posts.index.title')%></h2>
         <p>誰かの心の跡をたどる</p>
-        <%= link_to "訪ねる", posts_path, class: "btn btn-light" %>
+        <%= link_to t('top.index'), posts_path, class: "btn btn-light" %>
     </div>
 
     <div>
-        <h2>私の栞箱</h2>
+        <h2><%= t('posts.my_posts.title') %></h2>
         <p>過去の自分を紐解く</p>
-        <%= link_to "ひらく", my_posts_posts_path, class: "btn btn-light" %>
+        <%= link_to t('top.my_posts'), my_posts_posts_path, class: "btn btn-light" %>
     </div>
 
     <div>
-        <h2>栞を挟む</h2>
+        <h2><%= t('posts.new.title') %></h2>
         <p>心に残った一文を記録する</p>
-        <%= link_to "挟む", new_post_path, class: "btn btn-light" %>
+        <%= link_to t('top.edit'), new_post_path, class: "btn btn-light" %>
     </div>
 </div>

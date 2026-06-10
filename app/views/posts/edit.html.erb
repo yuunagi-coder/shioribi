@@ -1,10 +1,10 @@
-<h1>編集</h1>
+<h1><%= t('posts.edit.title') %></h1>
 
 <%= render "form", post:@post %>
 
 <br>
 
 <div>
-    <%= link_to "詳細", @post, class: "btn btn-light" %>
-    <%= link_to "一覧", posts_path, class: "btn btn-light" %>
+    <%= link_to t('posts.show.title'), @post, class: "btn btn-light" %>
+    <%= link_to t('posts.my_posts.title'), my_posts_posts_path, class: "btn btn-light" %>
 </div>
