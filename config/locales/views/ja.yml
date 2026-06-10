@@ -1,0 +1,45 @@
+ja:
+  helpers:
+    submit:
+      create: 登録
+      submit: 記録する
+      update: 更新
+    label:
+      email: メールアドレス
+      password: パスワード
+  user_sessions:
+    new:
+      title: ログイン
+      login: ログイン
+      to_register_page: 登録ページへ
+      password_forget: パスワードをお忘れの方はこちら
+  users:
+    new:
+      title: ユーザー登録
+      to_login_page: ログインページへ
+    edit:
+      title: ユーザー編集
+  posts:
+    content: 一文
+    source: 出典
+    memo: メモ（任意）
+    new:
+      title: 栞を挟む
+    edit:
+      title: 編集
+      show: 詳細
+      index: 一覧
+    index:
+      title: 遠くの灯火
+      no_post: 投稿がありません
+    my_posts:
+      title: 私の栞箱
+    show:
+      title: 栞の中身
+      destroy: 栞を手放す
+  header:
+    logout: ログアウト
+  top:
+    index: 訪ねる
+    my_posts: ひらく
+    edit: 挟む

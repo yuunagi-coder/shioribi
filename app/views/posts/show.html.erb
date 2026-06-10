@@ -1,10 +1,10 @@
 <p><%= notice %></p>
-<h1>栞の中身</h1>
+<h1><%= t('posts.show.title') %></h1>
 
 <%= render @post %>
 
 <div class="d-flex flex column">
-    <%= link_to "編集", edit_post_path(@post),class: "btn btn-danger m-2" %>
-    <%= button_to "削除", @post, method: :delete ,class: "btn btn-danger m-2"%>
-    <%= link_to "一覧", my_posts_posts_path,class: "btn btn-light m-2" %>
+    <%= link_to t('posts.edit.title'), edit_post_path(@post),class: "btn btn-danger m-2" %>
+    <%= button_to t('posts.show.destroy'), @post, method: :delete ,class: "btn btn-danger m-2"%>
+    <%= link_to t('posts.my_posts.title'), my_posts_posts_path,class: "btn btn-light m-2" %>
 </div>

@@ -1,12 +1,12 @@
 <p><%= notice %></p>
-<h2>遠くの灯火</h2>
+<h2><%= t('posts.index.title')%></h2>
 <div id="posts">
 <% if @posts.any? %>
     <% @posts.each do |post| %>
         <%= render partial: 'post', locals: { post: post, show_user_name: true } %>
     <% end %>
 <% else %>
-    <p>投稿がありません</p>
+    <p><%= t('posts.index.no_post') %></p>
 <% end %>
 </div>
 

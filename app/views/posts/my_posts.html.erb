@@ -1,13 +1,13 @@
-<h2>私の栞箱</h2>
+<h2><%= t('posts.my_posts.title') %></h2>
 <div id="posts">
 <% if @posts.any? %>
     <% @posts.each do |post| %>
         <%= render partial: 'post', locals: { post: post, show_user_name: false } %>
         <div class="m-2 d-flex justify-content-end">
-            <%= link_to "詳細", post, class: "btn btn-danger w-25" %>
+            <%= link_to t('posts.show.title'), post, class: "btn btn-danger w-25" %>
         </div>
     <% end %>
 <% else %>
-    <p>投稿がありません</p>
+    <p><%= t('posts.index.no_post') %></p>
 <% end %>
 </div>
