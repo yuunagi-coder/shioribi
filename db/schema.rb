@@ -10,17 +10,34 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.1].define(version: 2026_05_20_122155) do
+ActiveRecord::Schema[7.1].define(version: 2026_06_10_213652) do
   # These are extensions that must be enabled in order to support this database
-  enable_extension "pg_catalog.plpgsql"
+  enable_extension "plpgsql"
+
+  create_table "emotion_tags", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["name"], name: "index_emotion_tags_on_name", unique: true
+  end
+
+  create_table "post_emotion_tags", force: :cascade do |t|
+    t.bigint "post_id", null: false
+    t.bigint "emotion_tag_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["emotion_tag_id"], name: "index_post_emotion_tags_on_emotion_tag_id"
+    t.index ["post_id", "emotion_tag_id"], name: "index_post_emotion_tags_on_post_id_and_emotion_tag_id", unique: true
+    t.index ["post_id"], name: "index_post_emotion_tags_on_post_id"
+  end
 
   create_table "posts", force: :cascade do |t|
     t.string "content"
-    t.datetime "created_at", null: false
     t.string "memo"
     t.string "source"
-    t.datetime "updated_at", null: false
     t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_posts_on_user_id"
   end
 
@@ -32,5 +49,7 @@ ActiveRecord::Schema[8.1].define(version: 2026_05_20_122155) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "post_emotion_tags", "emotion_tags"
+  add_foreign_key "post_emotion_tags", "posts"
   add_foreign_key "posts", "users"
 end
