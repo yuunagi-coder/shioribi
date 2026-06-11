@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-    before_action :set_post, only: [:show, :edit, :update, :destroy]
+    before_action :set_post, only: [ :show, :edit, :update, :destroy ]
     def index
         @posts = Post.all.order(created_at: :desc)
     end
@@ -20,19 +20,19 @@ class PostsController < ApplicationController
         if @post.save
             if params[:post][:emotion_tag_ids].present?
                 @post.emotion_tag_ids = params[:post][:emotion_tag_ids]
-            end        
-            redirect_to @post, notice: '栞を挟みました'        
+            end
+            redirect_to @post, notice: "栞を挟みました"
         else
             render :new
-        end            
+        end
     end
-    
+
     def edit
     end
 
     def update
         if @post.update(post_params)
-            redirect_to @post, notice: '栞を更新しました' 
+            redirect_to @post, notice: "栞を更新しました"
         else
             render :edit
         end

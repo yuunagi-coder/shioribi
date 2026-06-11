@@ -7,6 +7,6 @@ class CreatePostEmotionTags < ActiveRecord::Migration[7.1]
       t.timestamps
     end
 
-    add_index :post_emotion_tags, [:post_id, :emotion_tag_id], unique: true
+    add_index :post_emotion_tags, [ :post_id, :emotion_tag_id ], unique: true
   end
 end

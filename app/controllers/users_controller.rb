@@ -16,7 +16,7 @@ class UsersController < ApplicationController
 
         respond_to do |format|
             if @user.save
-                format.html { redirect_to user_url(@user),notice: "ユーザーの作成に成功しました" }
+                format.html { redirect_to user_url(@user), notice: "ユーザーの作成に成功しました" }
                 format.json { render :show, status: :created, location: @user }
             else
                 format.html { render :new, status: :unprocessable_entity }
@@ -52,5 +52,4 @@ class UsersController < ApplicationController
     def user_params
       params.require(:user).permit(:name, :email, :password, :password_confirmation)
     end
-
 end
