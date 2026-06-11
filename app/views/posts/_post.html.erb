@@ -12,4 +12,9 @@
         <strong><%= t('posts.source')%>:</strong>
         <%= post.source %>
     </p>
+    <p class="m-2">
+        <% post.emotion_tags.each do |tag| %>
+            <span class="badge text-bg-secondary"><%= tag.name %></span>
+        <% end %>
+    </p>
 </div>

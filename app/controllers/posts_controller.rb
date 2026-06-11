@@ -18,6 +18,9 @@ class PostsController < ApplicationController
     def create
         @post = current_user.posts.new(post_params)
         if @post.save
+            if params[:post][:emotion_tag_ids].present?
+                @post.emotion_tag_ids = params[:post][:emotion_tag_ids]
+            end        
             redirect_to @post, notice: '栞を挟みました'        
         else
             render :new
@@ -47,6 +50,6 @@ class PostsController < ApplicationController
     end
 
     def post_params
-        params.require(:post).permit(:content, :memo, :source)
+        params.require(:post).permit(:content, :memo, :source, emotion_tag_ids: [])
     end
 end

@@ -22,6 +22,7 @@ ja:
   posts:
     content: 一文
     source: 出典
+    emotion_tag: 感情タグ
     memo: メモ（任意）
     new:
       title: 栞を挟む

@@ -18,6 +18,15 @@
         <%= form.label :source, t('posts.source'),style: "display:block" %>
         <%= form.text_area :source, placeholder: "作品名、人名等",class: 'form-control' %>
     </div>
+    <div class="form-group">
+        <%= form.label :emotion_tag_ids, t('posts.emotion_tag') %>
+        <%= form.collection_select :emotion_tag_ids,
+                                    EmotionTag.all,
+                                    :id,
+                                    :name,
+                                    { prompt: 'タグを選択してください'},
+                                    { multiple: true, class: 'form-control' } %>
+    </div>
     <div class="m-2">
         <%= form.label :memo, t('posts.memo'),style: "display:block" %>
         <%= form.text_area :memo, placeholder: "出会った時の思いを自由に書いてみましょう",class: 'form-control' %>
