@@ -11,7 +11,7 @@
     </div>
   <% end %>
 
-  <div class="input-group flex-column gap-3 mt-5">
+  <div class="input-group flex-column gap-1 mt-1 justify-content-center align-items-center">
     <div>
       <%= form.label :name, style: "display: block" %>
       <%= form.text_field :name, class: 'form-control' %>
@@ -33,7 +33,7 @@
     </div>
 
     <div>
-      <%= form.submit t('helpers.submit.create'), class: "btn btn-danger w-100" %>
+      <%= form.submit t('helpers.submit.create'), class: "btn btn-danger w-100 mt-2" %>
     </div>
   </div>
 <% end %>

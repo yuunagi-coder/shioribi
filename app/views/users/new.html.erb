@@ -1,9 +1,11 @@
-<h1><%= t('users.new.title') %></h1>
+<div class="d-flex flex-column justify-content-center align-items-center mt-5">
+    <h1><%= t('users.new.title') %></h1>
+</div>
 
 <%= render "form", user: @user %>
 
 <br>
 
-<div class="mt-3">
-    <%= link_to t('users.new.to_login_page'), new_login_path, class: 'btn btn-light w-100' %>
+<div class="d-flex flex-column justify-content-center align-items-center">
+    <%= link_to t('users.new.to_login_page'), new_login_path, class: 'btn btn-light ' %>
 </div>
