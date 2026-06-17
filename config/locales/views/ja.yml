@@ -36,10 +36,11 @@ ja:
     my_posts:
       title: 私の栞箱
     show:
-      title: 栞の中身
+      title: 読み返す
       destroy: 栞を手放す
   header:
     logout: ログアウト
+    edit_user: ユーザー設定
   top:
     index: 訪ねる
     my_posts: ひらく

@@ -1,6 +1,43 @@
-.background-wrapper {
+// ログイン前の背景設定
+.before-background-wrapper {
     background-image: url("/book.png");
     background-size: contain;
     background-position: center 40%;
     background-repeat: no-repeat;
+}
+
+// 今日の道しるべ背景設定
+.openbook-wrapper {
+    background-image: url('/background_image.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+// ログイン後トップページアニメーション
+.top-wrapper{
+    overflow: auto;
+    scroll-snap-type: y mandatory;
+    height: 100vh;
+    scrollbar-width: none;
+}
+
+.section{
+    scroll-snap-align: start;
+    min-height: 100vh;
+}
+
+// 文字が浮かんでくるアニメーション
+.quote_content span{
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: slideUp 0.6s ease forwards;
+}
+
+@keyframes slideUp{
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
