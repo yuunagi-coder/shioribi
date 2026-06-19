@@ -1,6 +1,6 @@
 <p><%= notice %></p>
 <h2><%= t('posts.index.title')%></h2>
-<div id="posts">
+<div id="flipbook" class="d-flex flex-column bg-light border boder-secondary border-5 justify-content-center w-100 m-auto post-index-wrapper">
 <% if @posts.any? %>
     <% @posts.each do |post| %>
         <%= render partial: 'post', locals: { post: post, show_user_name: true } %>
@@ -9,4 +9,7 @@
     <p><%= t('posts.index.no_post') %></p>
 <% end %>
 </div>
-
+<div class="d-flex m-3">
+    <button id="prepage" class="btn btn-danger m-3">前のページ</button>
+    <button id="nextpage" class="btn btn-danger m-3">次のページ</button>
+</div>
