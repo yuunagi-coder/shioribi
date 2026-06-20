@@ -1,4 +1,6 @@
-<p><%= notice %></p>
+<% if notice.present? %>
+  <p class="alert alert-success"><%= notice %></p>
+<% end %>
 <h2><%= t('posts.index.title')%></h2>
 <div id="flipbook" class="d-flex flex-column bg-light border boder-secondary border-5 justify-content-center w-100 m-auto post-index-wrapper">
 <% if @posts.any? %>

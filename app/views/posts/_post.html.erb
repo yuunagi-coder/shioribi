@@ -15,7 +15,13 @@
             『<%= post.source %>』
         </p>
     </div>
-    <div class="post-footer">
+    <div class="post-footer d-flex">
+        <div class="d-flex">
+            <i class="bi bi-chat m-2"></i>
+            <p class="fs-4 m-2">
+                <%= post.memo %>
+            </p>
+        </div>
         <p class="m-2 fs-4">
             <% post.emotion_tags.each do |tag| %>
                 <span class="badge text-bg-secondary"><%= tag.name %></span>
