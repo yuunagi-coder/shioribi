@@ -100,13 +100,14 @@ GEM
       rack-test (>= 0.6.3)
       regexp_parser (>= 1.5, < 3.0)
       xpath (~> 3.2)
-    concurrent-ruby (1.3.6)
+    concurrent-ruby (1.3.7)
     connection_pool (3.0.2)
-    crass (1.0.6)
+    crass (1.0.7)
     cssbundling-rails (1.4.3)
       railties (>= 6.0.0)
-    dartsass-rails (0.4.1)
+    dartsass-rails (0.5.1)
       railties (>= 6.0.0)
+      sass-embedded (~> 1.63)
     date (3.5.1)
     debug (1.11.1)
       irb (~> 1.10)
@@ -123,7 +124,13 @@ GEM
       raabro (~> 1.4)
     globalid (1.3.0)
       activesupport (>= 6.1)
-    i18n (1.14.8)
+    google-protobuf (4.35.1-aarch64-linux-gnu)
+      bigdecimal
+      rake (~> 13.3)
+    google-protobuf (4.35.1-x86_64-linux-gnu)
+      bigdecimal
+      rake (~> 13.3)
+    i18n (1.15.2)
       concurrent-ruby (~> 1.0)
     image_processing (2.0.2)
     io-console (0.8.2)
@@ -137,7 +144,7 @@ GEM
       activesupport (>= 7.0.0)
     jsbundling-rails (1.3.1)
       railties (>= 6.0.0)
-    json (2.19.7)
+    json (2.20.0)
     kamal (2.11.0)
       activesupport (>= 7.0)
       base64 (~> 0.2)
@@ -183,9 +190,9 @@ GEM
       net-protocol
     net-ssh (7.3.2)
     nio4r (2.7.5)
-    nokogiri (1.19.3-aarch64-linux-gnu)
+    nokogiri (1.19.4-aarch64-linux-gnu)
       racc (~> 1.4)
-    nokogiri (1.19.3-x86_64-linux-gnu)
+    nokogiri (1.19.4-x86_64-linux-gnu)
       racc (~> 1.4)
     ostruct (0.6.3)
     parallel (1.28.0)
@@ -194,7 +201,7 @@ GEM
       racc
     pg (1.6.3-aarch64-linux)
     pg (1.6.3-x86_64-linux)
-    pp (0.6.3)
+    pp (0.6.4)
       prettyprint
     prettyprint (0.2.0)
     prism (1.9.0)
@@ -202,9 +209,6 @@ GEM
       actionpack (>= 7.0.0)
       activesupport (>= 7.0.0)
       rack
-    psych (5.4.0)
-      date
-      stringio
     public_suffix (7.0.5)
     puma (8.0.2)
       nio4r (~> 2.0)
@@ -253,9 +257,14 @@ GEM
       zeitwerk (~> 2.6)
     rainbow (3.1.1)
     rake (13.4.2)
-    rdoc (7.2.0)
+    rbs (4.0.3)
+      logger
+      prism (>= 1.6.0)
+      tsort
+    rdoc (8.0.0)
       erb
-      psych (>= 4.0.0)
+      prism (>= 1.6.0)
+      rbs (>= 4.0.0)
       tsort
     regexp_parser (2.12.0)
     reline (0.6.3)
@@ -291,6 +300,10 @@ GEM
       rubocop-rails (>= 2.30)
     ruby-progressbar (1.13.0)
     rubyzip (3.3.0)
+    sass-embedded (1.101.0-aarch64-linux-gnu)
+      google-protobuf (~> 4.31)
+    sass-embedded (1.101.0-x86_64-linux-gnu)
+      google-protobuf (~> 4.31)
     securerandom (0.4.1)
     selenium-webdriver (4.44.0)
       base64 (~> 0.2)
@@ -320,7 +333,6 @@ GEM
       ostruct
     stimulus-rails (1.3.4)
       railties (>= 6.0.0)
-    stringio (3.2.0)
     thor (1.5.0)
     thruster (0.1.21-aarch64-linux)
     thruster (0.1.21-x86_64-linux)
@@ -361,7 +373,7 @@ DEPENDENCIES
   bundler-audit
   capybara
   cssbundling-rails
-  dartsass-rails (~> 0.4.0)
+  dartsass-rails (~> 0.5.1)
   debug
   image_processing (~> 2.0)
   jbuilder
