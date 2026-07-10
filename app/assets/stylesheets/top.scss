@@ -12,14 +12,32 @@
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
+    height: calc(100vh - 70px - 70px);
 }
+
 
 // ログイン後トップページアニメーション
 .top-wrapper{
     overflow: auto;
-    scroll-snap-type: y mandatory;
-    height: 100vh;
-    scrollbar-width: none;
+    height: calc(100vh - 70px - 70px);
+}
+
+html, body{
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    padding-top: 70px;
+    padding-bottom: 70px;
+    flex-grow: 1;
+    height: calc(100vh - 70px - 70px);
+    overflow: hidden;
 }
 
 .section{

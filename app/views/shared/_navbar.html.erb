@@ -1,0 +1,12 @@
+<div class="fixed-bottom p-3">
+<ul class="nav nav-underline justify-content-evenly">
+  <li class="nav-item">
+    <h2><%= link_to t('posts.index.title'), posts_path, class: 'text-decoration-none text-dark'%></h2>           
+  </li>
+  <li class="nav-item">
+    <h2><%= link_to t('posts.my_posts.title'), my_posts_posts_path, class: "text-decoration-none text-dark" %></h2>
+  </li>
+  <li class="nav-item">
+    <h2><%= link_to t('posts.new.title'), new_post_path, class: "text-decoration-none text-dark" %></h2>
+  </li>
+</ul>

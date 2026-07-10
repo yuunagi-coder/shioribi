@@ -1,8 +1,6 @@
-<% if notice.present? %>
-  <p class="alert alert-success"><%= notice %></p>
-<% end %>
+<%= render 'shared/flash_message' %>
 <div class="d-flex flex-column top-wrapper">
-    <div class="d-flex flex-column section">
+    <div class="d-flex flex-column ">
         <div class="flex-grow-1 d-flex flex-column align-items-center openbook-wrapper">
             <div>
                 <h2 class="text-dark-emphasis m-3">今日の道しるべ</h2>
@@ -12,30 +10,6 @@
                 <span class="fs-1 quote_content">大丈夫,きっとまた会えるよ</span>
                 <span class="fs-2 mt-4 quote_content">夏目友人帳</span>
             </div>
-        </div>
-    </div>
-
-    <div class="flex-grow-1 d-flex flex-column justify-content-center section openbook-wrapper">
-        <div class="d-flex flex-column align-items-center">
-            <h2 class="text-dark-emphasis m-3">目次</h2>
-        </div>
-        <div class="d-flex flex-grow-1 justify-content-center">
-            <div class="d-flex flex-grow-1 flex-column justify-content-center align-items-end w-50 mx-0 pe-5">
-                <div class="bg-danger-subtle m-5 text-end">
-                    <h2><%= link_to t('posts.index.title'), posts_path, class: "text-decoration-none text-dark-emphasis" %></h2>
-                    <p>誰かの心の跡をたどる</p>
-               </div>
-
-                <div class="bg-danger-subtle m-5 text-end">
-                    <h2><%= link_to t('posts.my_posts.title'), my_posts_posts_path, class: "text-decoration-none text-dark-emphasis" %></h2>
-                    <p>過去の自分を紐解く</p>
-                </div>
-            </div>
-            <div class="w-50 d-flex flex-column justify-content-center align-items-start ps-5">
-                <div class="bg-danger-subtle m-5 text-start">
-                    <h2><%= link_to t('posts.new.title'), new_post_path, class: "text-decoration-none text-dark-emphasis" %></h2>
-                    <p>心に残った一文を記録する</p>
-                </div>
         </div>
     </div>
 </div>

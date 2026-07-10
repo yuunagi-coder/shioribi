@@ -1,3 +1,4 @@
+// 文字を順番に浮かび上がらせるアニメーション
 document.addEventListener('turbo:load', function(){
 	document.querySelectorAll('.quote_content').forEach(el => {
 	  const text = el.textContent;
