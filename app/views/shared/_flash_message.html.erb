@@ -1,0 +1,9 @@
+<% flash.each do |message_type, message| %>
+  <% bootstrap_class = {
+    "notice" => "success",
+    "alert" => "danger"
+}[type] || type %>
+  <div class="alert alert-<%= bootstrap_class %>">
+    <%= message %>
+  </div>
+<% end %>

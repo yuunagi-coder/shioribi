@@ -1,7 +1,9 @@
 <div class="d-flex flex-column justify-content-center align-items-center mt-5">
     <h1><%= t('user_sessions.new.title') %></h1>
 </div>
-
+<div class="mt-3 d-flex flex-column justify-content-center align-items-center">
+  <%= render 'shared/flash_message' %>
+</div>
 <div class="input-group gap-3 mt-3 d-flex flex-column justify-content-center align-items-center">
 <%= form_with(url: login_path) do |form| %>
     <div>

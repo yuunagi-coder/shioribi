@@ -23,14 +23,17 @@
     <%= javascript_include_tag "application", "data-turbo-track": "reload", type: "module" %>
   </head>
 
-  <body class="bg-danger-subtle container d-flex flex-column ">
+  <body class="bg-danger-subtle d-flex flex-column container">
     <% if current_user.present? %>
       <%= render 'shared/header' %>
       <main class="mw-100 flex-grow-1 d-flex flex-column text-align-center">
     <% else %>
-      <main class="mw-100 vh-100 flex-grow-1 d-flex flex-column justify-content-center text-align-center before-background-wrapper">
+      <main class="mw-100 pt-5 flex-grow-1 d-flex flex-column justify-content-center text-align-center before-background-wrapper">
     <% end %>     
          <%= yield %>
+    <% if current_user.present? %>
+      <%= render 'shared/navbar' %>
+    <% end %>
       </main>
   </body>
 </html>
