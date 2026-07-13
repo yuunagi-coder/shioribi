@@ -1,0 +1,69 @@
+<%= turbo_stream.prepend "modal-container" do %>
+<div data-controller="introduction-modal"
+        data-introduction-modal-target="introductionModal"
+        class="modal fade" 
+        id="introductionModalToggle" 
+        aria-hidden="true" 
+        aria-labelledby="introductionModalToggleLabel" 
+        tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="introductionModalToggleLabel">まずは栞を挟んでみましょう</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <%= image_tag "post_new.png", class: "img-thumbnail w-50 mx-auto d-block border-0", alt: "栞を挟む" %>
+        <div>
+          「栞を挟む」から自分の心に残った一文を記録できます</br>
+          読書、映画、音楽等自分の心が動いたときに栞灯を開いて記録すると</br>
+          振り返った時に自分の価値観に気づくきっかけになるかもしれません
+        </div>
+      </div>  
+      <div class="modal-footer">
+        <button class="btn btn-primary" data-bs-target="#introductionModalToggle2" data-bs-toggle="modal">次へ</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="introductionModalToggle2" aria-hidden="true" aria-labelledby="introductionModalToggleLabel2" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="introductionModalToggleLabel2">栞を振り返りましょう</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <%= image_tag "posts_mypost.png", class: "img-thumbnail w-25 mx-auto d-block border-0", alt: "私の栞箱" %>
+        <div>
+          「私の栞箱」では過去に残した一文を振り返ることができます</br>
+          過去の自分の感情が、今の自分を救ってくれるかもしれません
+        </div>
+      </div>  
+      <div class="modal-footer">
+        <button class="btn btn-primary" data-bs-target="#introductionModalToggle3" data-bs-toggle="modal">次へ</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="introductionModalToggle3" aria-hidden="true" aria-labelledby="introductionModalToggleLabel3" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="introductionModalToggleLabel3">他の誰かの栞を覗いてみましょう</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <%= image_tag "posts.png", class: "img-thumbnail w-50 mx-auto d-block border-0", alt: "遠くの灯火" %>
+        <div>
+          「遠くの灯火」では他の誰かが記録した一文を見ることができます</br>
+        ページをめくって新しい価値観との出会いを見つけてみてください
+        </div>
+      </div>  
+      <div class="modal-footer">
+        <button class="btn btn-primary" data-bs-target="#introductionModalToggle3" data-bs-toggle="modal">閉じる</button>
+      </div>
+    </div>
+  </div>
+</div>
+<% end %>

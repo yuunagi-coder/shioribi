@@ -6,7 +6,7 @@
     <%= link_to '栞灯 SHIORIBI', root_path, class: 'navbar-brand fs-2' %>
 
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
-        <ul class="navbar-nav ms-auto">
+        <ul class="navbar-nav ms-auto gap-3">
             <li class="nav-item">
                 <span class="nav-link"><%= current_user.name %></span>
             </li>
@@ -17,6 +17,10 @@
             <li class="nav-item d-flex align-items-center">
                 <i class="bi bi-box-arrow-right ml-2"></i>
                 <%= link_to t('header.logout'), logout_path, class: 'nav-link' %>
+            </li>
+        <li class="nav-item d-flex align-items-center">
+                <i class="bi bi-info-circle ml-2"></i>
+                <%= link_to t('top.introduction'), introduction_path, class: 'nav-link', data: { turbo_stream: 'introduction_modal'} %>
             </li>
         </ul>
     </div>

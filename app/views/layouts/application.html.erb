@@ -8,7 +8,7 @@
     <meta name="mobile-web-app-capable" content="yes">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    <%= turbo_frame_tag 'introduction_modal' %>
     <%= yield :head %>
 
     <%# Enable PWA manifest for installable apps (make sure to enable in config/routes.rb too!) %>
@@ -26,7 +26,8 @@
   <body class="bg-danger-subtle d-flex flex-column container">
     <% if current_user.present? %>
       <%= render 'shared/header' %>
-      <main class="mw-100 flex-grow-1 d-flex flex-column text-align-center">
+      <div id="modal-container"></div>
+      <main id="main" class="mw-100 flex-grow-1 d-flex flex-column text-align-center">
     <% else %>
       <main class="mw-100 pt-5 flex-grow-1 d-flex flex-column justify-content-center text-align-center before-background-wrapper">
     <% end %>     
