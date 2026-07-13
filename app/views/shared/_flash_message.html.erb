@@ -2,7 +2,7 @@
   <% bootstrap_class = {
     "notice" => "success",
     "alert" => "danger"
-}[type] || type %>
+}[message_type] || message_type %>
   <div class="alert alert-<%= bootstrap_class %>">
     <%= message %>
   </div>
