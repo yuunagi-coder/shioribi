@@ -1,4 +1,5 @@
 <h2><%= t('posts.my_posts.title') %></h2>
+<%= render 'shared/flash_message' %>
 <div id="posts">
 <% if @posts.any? %>
     <% @posts.each do |post| %>

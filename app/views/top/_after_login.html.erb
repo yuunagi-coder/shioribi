@@ -7,8 +7,12 @@
                 <h2 class="text-dark-emphasis m-3"><%= @today %>(<%= @day_of_week %>)</h2>
             </div>
             <div class="d-flex flex-grow-1 flex-column justify-content-center align-items-center mb-5">
-                <span class="fs-1 quote_content">大丈夫,きっとまた会えるよ</span>
-                <span class="fs-2 mt-4 quote_content">夏目友人帳</span>
+              <% if @post.nil? %>
+                <span class="fs-1">「栞を挟む」から心に残った一文を記録してみよう</span>
+              <% else %>
+                <span class="fs-1 quote_content"><%= @post.content %></span>
+                <span class="fs-2 mt-4 quote_content"><%= @post.source %></span>
+              <% end %>
             </div>
         </div>
     </div>
