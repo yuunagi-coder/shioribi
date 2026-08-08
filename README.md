@@ -174,6 +174,6 @@ SNSでアニメ名言集を眺めていて、何かのきっかけで印象に�
         - Railsアプリケーションコンテナ
         - PostgreSQLコンテナ
 - 認証
-    - Sorcery
+    - has_secure_password
 - テストの練習
-    - RSpec
+    - RSpec(未実装)
