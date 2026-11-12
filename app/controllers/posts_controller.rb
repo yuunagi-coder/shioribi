@@ -1,5 +1,6 @@
 class PostsController < ApplicationController
     before_action :set_post, only: [ :show, :edit, :update, :destroy ]
+    before_action :authorize_user!, only: [ :show, :edit, :update, :destroy ]
     def index
         @posts = Post.all.order(created_at: :desc)
     end
@@ -47,6 +48,10 @@ class PostsController < ApplicationController
 
     def set_post
         @post = Post.find(params[:id])
+    end
+
+    def authorize_user!
+        redirect_to(root_url, alert: "権限がありません") unless current_user.id == @post.user_id
     end
 
     def post_params
