@@ -13,7 +13,7 @@ Rails.application.routes.draw do
   root "top#index"
   get "introduction", to: "top#introduction" 
   
-  resources :users, only: [ :new, :create, :edit, :destroy, :show, :update ]
+  resource :user, only: [ :new, :create, :edit, :destroy, :show, :update ]
   resources :posts do
     collection do
       get :my_posts
