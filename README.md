@@ -176,4 +176,4 @@ SNSでアニメ名言集を眺めていて、何かのきっかけで印象に�
 - 認証
     - has_secure_password
 - テストの練習
-    - RSpec
+    - RSpec(未実装)
