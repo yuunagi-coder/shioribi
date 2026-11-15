@@ -49,7 +49,7 @@ class UsersController < ApplicationController
     def set_user
         @user = User.find(current_user.id)
     end
-    
+
     def authorize_user!
       redirect_to(root_url, alert: "権限がありません") unless current_user == @user
     end
